@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="优ABC">
 <meta property="og:description" content="1.结构python的class编写格式和C++与Java有了本质上的区别，不像其他两种语言，主体结构都有类似之处。个人觉得python的类定义方面还是属于比较简单，但同时正式什么都从简单考虑，导致真的去利用它进行一些类中的限制操作时，又要多花时间去写代码，两面性吧。下面以Animal类来进行代码格式说明。 123456class Animal(object):    def __init__(s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-12T07:42:59.453Z">
+<meta property="og:updated_time" content="2019-11-12T07:52:31.830Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,7 +360,7 @@
       
 
       
-        <h2 id="1-结构"><a href="#1-结构" class="headerlink" title="1.结构"></a>1.结构</h2><p>python的class编写格式和C++与Java有了本质上的区别，不像其他两种语言，主体结构都有类似之处。个人觉得python的类定义方面还是属于比较简单，但同时正式什么都从简单考虑，导致真的去利用它进行一些类中的限制操作时，又要多花时间去写代码，两面性吧。下面以Animal类来进行代码格式说明。</p>
+        <h1 id="1-结构"><a href="#1-结构" class="headerlink" title="1.结构"></a>1.结构</h1><p>python的class编写格式和C++与Java有了本质上的区别，不像其他两种语言，主体结构都有类似之处。个人觉得python的类定义方面还是属于比较简单，但同时正式什么都从简单考虑，导致真的去利用它进行一些类中的限制操作时，又要多花时间去写代码，两面性吧。下面以Animal类来进行代码格式说明。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        print(<span class="string">'A animal is born...'</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(self.name+<span class="string">'is running...'</span>)</span><br></pre></td></tr></table></figure>
 
   <a id="more"></a> 
@@ -375,7 +375,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">setname</span><span class="params">(self, name)</span>:</span></span><br><span class="line">    self.name = name</span><br><span class="line">    </span><br><span class="line"><span class="keyword">from</span> types <span class="keyword">import</span> MethodType</span><br><span class="line">animal.sex = <span class="string">'man'</span></span><br><span class="line">animal.set_name = MethodType(setname, animal)</span><br><span class="line">animal.set_name(<span class="string">'新名字'</span>)</span><br></pre></td></tr></table></figure>
 
 <p>上面我们就给animal对象自由的添加了一个新的属性和方法了。</p>
-<h2 id="2-访问限制"><a href="#2-访问限制" class="headerlink" title="2.访问限制"></a>2.访问限制</h2><h2 id="3-继承和多态"><a href="#3-继承和多态" class="headerlink" title="3.继承和多态"></a>3.继承和多态</h2><h2 id="4-其他"><a href="#4-其他" class="headerlink" title="4.其他"></a>4.其他</h2>
+<h1 id="2-访问限制"><a href="#2-访问限制" class="headerlink" title="2.访问限制"></a>2.访问限制</h1><h1 id="3-继承和多态"><a href="#3-继承和多态" class="headerlink" title="3.继承和多态"></a>3.继承和多态</h1><h1 id="4-其他"><a href="#4-其他" class="headerlink" title="4.其他"></a>4.其他</h1>
       
     </div>
     
@@ -549,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-结构"><span class="nav-number">1.</span> <span class="nav-text">1.结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-访问限制"><span class="nav-number">2.</span> <span class="nav-text">2.访问限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-继承和多态"><span class="nav-number">3.</span> <span class="nav-text">3.继承和多态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-其他"><span class="nav-number">4.</span> <span class="nav-text">4.其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-结构"><span class="nav-number">1.</span> <span class="nav-text">1.结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-访问限制"><span class="nav-number">2.</span> <span class="nav-text">2.访问限制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-继承和多态"><span class="nav-number">3.</span> <span class="nav-text">3.继承和多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-其他"><span class="nav-number">4.</span> <span class="nav-text">4.其他</span></a></li></ol></div>
             
 
           </div>
