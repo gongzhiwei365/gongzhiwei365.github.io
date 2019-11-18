@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="优ABC">
 <meta property="og:description" content="结构python的class编写格式和C++与Java有了本质上的区别，不像其他两种语言，主体结构都有类似之处。个人觉得python的类定义方面还是属于比较简单，但同时正式什么都从简单考虑，导致真的去利用它进行一些类中的限制操作时，又要多花时间去写代码，两面性吧。下面以Animal类来进行代码格式说明。 123456class Animal(object):    def __init__(sel">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-12T08:00:15.439Z">
+<meta property="og:updated_time" content="2019-11-18T13:21:09.636Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -374,8 +374,25 @@
 <p>就可以直接打印出动物A的结果。Python类中，我最不适应的就是它的类属性和方法都是可以随时定义和添加的（如果不做限制的话）。例如：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">setname</span><span class="params">(self, name)</span>:</span></span><br><span class="line">    self.name = name</span><br><span class="line">    </span><br><span class="line"><span class="keyword">from</span> types <span class="keyword">import</span> MethodType</span><br><span class="line">animal.sex = <span class="string">'man'</span></span><br><span class="line">animal.set_name = MethodType(setname, animal)</span><br><span class="line">animal.set_name(<span class="string">'新名字'</span>)</span><br></pre></td></tr></table></figure>
 
-<p>上面我们就给animal对象自由的添加了一个新的属性和方法了。</p>
-<h1 id="访问限制"><a href="#访问限制" class="headerlink" title="访问限制"></a>访问限制</h1><h1 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h1><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>
+<p>上面我们就给animal对象自由的添加了一个新的属性和方法了。不过我个人认为需要使用的类比较常见的属性方法应该提前定义好，也方便我们定义多个对象的时候不用重复的做添加属性工作。</p>
+<h1 id="访问限制"><a href="#访问限制" class="headerlink" title="访问限制"></a>访问限制</h1><p>在上面的部分我们了解到了类的属性和方法我们是可以直接在外部去添加的，其实不只是添加，类的属性和方法在外部其实也是一个“public”的存在，访问属性只需要直接调用就可以了。比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(animal.name)</span><br></pre></td></tr></table></figure>
+
+<p>但是其实有时候我们并不希望我们定义的所有属性都能被外界随意的修改，浏览，这时候我们就要了解python类的访问限制了。在python中我们可以使用下划线”<em>“或者双下划线”_</em>“来对类属性进行修饰，比如我们要定义一个age属性，我们就可以写成:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_age = 3 or __age = 3</span><br></pre></td></tr></table></figure>
+
+<p>这时候我们再使用print测试会显示没有这个属性。那么”_age”和”__age”的区别在那里呢？简而言之，单下划线相当于protected，只能被其本身和子类访问。而双下划线则相当于private，只允许其自身进行访问。另外双下划线的其实是将属性进行了一些名称上的改变使得我们用age访问不了，实际变成了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_Anmimal__age</span><br></pre></td></tr></table></figure>
+
+<p>在外部，我们使用以下形式仍然可以访问，但是，我们强烈不建议这么做。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animal._Animal__age</span><br></pre></td></tr></table></figure>
+
+<p>以上的例子是对于属性的，类方法类比。还有一种前后都是双下划线的，比如我们类开头写的初始化函数的形式，这种定义的就是python系统包中定义好的一些内容，一般用不到，如果你想要自定义里面的内容，你可以对其进行重写。</p>
+<h1 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h1><p>最开始的时候就说过了class类名称后的括号中一般默认写的是object，那是因为所有的类都是继承于object这个初始对象的。当我们已经有了一个对象，希望对它进行继承的话，我们只需要将括号中的内容换成父类名称就OK了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">(Animal)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        print(<span class="string">'A dog is born...'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>以上的代码，我们就重新定义了一个Dog类，它继承于Animal类，并且我们修改了构造函数的内容。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>
       
     </div>
     
