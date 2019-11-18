@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="优ABC">
 <meta property="og:description" content="结构python的class编写格式和C++与Java有了本质上的区别，不像其他两种语言，主体结构都有类似之处。个人觉得python的类定义方面还是属于比较简单，但同时正式什么都从简单考虑，导致真的去利用它进行一些类中的限制操作时，又要多花时间去写代码，两面性吧。下面以Animal类来进行代码格式说明。 123456class Animal(object):    def __init__(sel">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-18T13:21:09.636Z">
+<meta property="og:updated_time" content="2019-11-18T13:25:37.849Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -378,10 +378,10 @@
 <h1 id="访问限制"><a href="#访问限制" class="headerlink" title="访问限制"></a>访问限制</h1><p>在上面的部分我们了解到了类的属性和方法我们是可以直接在外部去添加的，其实不只是添加，类的属性和方法在外部其实也是一个“public”的存在，访问属性只需要直接调用就可以了。比如：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(animal.name)</span><br></pre></td></tr></table></figure>
 
-<p>但是其实有时候我们并不希望我们定义的所有属性都能被外界随意的修改，浏览，这时候我们就要了解python类的访问限制了。在python中我们可以使用下划线”<em>“或者双下划线”_</em>“来对类属性进行修饰，比如我们要定义一个age属性，我们就可以写成:</p>
+<p>但是其实有时候我们并不希望我们定义的所有属性都能被外界随意的修改，浏览，这时候我们就要了解python类的访问限制了。在python中我们可以使用单下划线或者双下划线来对类属性进行修饰，比如我们要定义一个age属性，我们就可以写成:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_age = 3 or __age = 3</span><br></pre></td></tr></table></figure>
 
-<p>这时候我们再使用print测试会显示没有这个属性。那么”_age”和”__age”的区别在那里呢？简而言之，单下划线相当于protected，只能被其本身和子类访问。而双下划线则相当于private，只允许其自身进行访问。另外双下划线的其实是将属性进行了一些名称上的改变使得我们用age访问不了，实际变成了</p>
+<p>这时候我们再使用print测试会显示没有这个属性。那么单下划线和双下划线的区别在那里呢？简而言之，单下划线相当于protected，只能被其本身和子类访问。而双下划线则相当于private，只允许其自身进行访问。另外双下划线的其实是将属性进行了一些名称上的改变使得我们用age访问不了，实际变成了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_Anmimal__age</span><br></pre></td></tr></table></figure>
 
 <p>在外部，我们使用以下形式仍然可以访问，但是，我们强烈不建议这么做。</p>
