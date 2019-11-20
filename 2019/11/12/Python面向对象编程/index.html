@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="优ABC">
 <meta property="og:description" content="结构python的class编写格式和C++与Java有了本质上的区别，不像其他两种语言，主体结构都有类似之处。个人觉得python的类定义方面还是属于比较简单，但同时正式什么都从简单考虑，导致真的去利用它进行一些类中的限制操作时，又要多花时间去写代码，两面性吧。下面以Animal类来进行代码格式说明。 123456class Animal(object):    def __init__(sel">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-18T13:25:37.849Z">
+<meta property="og:updated_time" content="2019-11-20T11:16:36.773Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -391,8 +391,17 @@
 <h1 id="继承和多态"><a href="#继承和多态" class="headerlink" title="继承和多态"></a>继承和多态</h1><p>最开始的时候就说过了class类名称后的括号中一般默认写的是object，那是因为所有的类都是继承于object这个初始对象的。当我们已经有了一个对象，希望对它进行继承的话，我们只需要将括号中的内容换成父类名称就OK了。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">(Animal)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        print(<span class="string">'A dog is born...'</span>)</span><br></pre></td></tr></table></figure>
 
-<p>以上的代码，我们就重新定义了一个Dog类，它继承于Animal类，并且我们修改了构造函数的内容。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1>
+<p>以上的代码，我们就重新定义了一个Dog类，它继承于Animal类，并且我们修改了构造函数的内容。父类中的方法在子类中是默认存在的，我们可以进行调用，但是如果我们要修改子类的父类方法，则需要在子类中重新编写方法内容。</p>
+<p>其次，子类和父类的关系本质上是一个树状的关系，子类属于自己的单独一类，但是子类同时也是父类的一种，但是父类却并不属于子类的一种。在python中我们可以使用isinstance()这个函数去判断两个对象是不是相同种类。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">d = Dog(<span class="string">'dd'</span>)</span><br><span class="line">&gt;&gt;isinstance(d, Dog)</span><br><span class="line">Ture</span><br><span class="line">&gt;&gt;isinstance(d, Animal)</span><br><span class="line">Ture</span><br><span class="line">&gt;&gt;isinstance(animal, Dog)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line">&gt;&gt;isinstance(animal, Animal)</span><br><span class="line">Ture</span><br></pre></td></tr></table></figure>
+
+<p>这就是多态的概念，Animal类可以生出Dog类、Cat类等等，对于Animal的一些方法，它的子类都可以调用，提高了我们编程的系统性。一些对于Animal的通用操作，我们可以在Animal中直接定义好，它的子类的独特方法再单独定制。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>上面我们说过，python类中的属性和方法在外部也是可以任意定义和添加的，这方便了我们开发人员的工作，但是我们并不是任何时候都需要这样的特性，更多的时候我们习惯向Java那样，只使用类中定义好的属性，避免外部对属性完整性的破坏。Python中有办法实现嘛？答案是肯定的，这里引入：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__slots__=(<span class="string">'name,age'</span>)</span><br><span class="line">animal.name = <span class="string">'动物'</span></span><br><span class="line">animal.age = <span class="string">'3'</span></span><br><span class="line"><span class="comment">#animal.sex = 'man'		此语句运行会报错，提示没有此属性</span></span><br></pre></td></tr></table></figure>
+
+<p>值得注意的是使用slots时，只对当前的类起限制作用。当类有了子类的时候，子类的属性添加不受父类slots的限制。如果需要对子类进行限制，需要重新在子类中编写slots代码行。</p>
+<p>以上是python面向对象编程的一些基础内容，更高级的还有一些多继承，枚举等内容，不过有了基础就可以在实际遇到的过程边学边写。</p>
+
       
     </div>
     
