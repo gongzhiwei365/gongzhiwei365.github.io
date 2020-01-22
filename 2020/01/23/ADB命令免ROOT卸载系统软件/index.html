@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="开始," />
+  <meta name="keywords" content="Android,shell," />
 
 
 
@@ -94,15 +94,15 @@
 
 
 
-<meta name="description" content="之前的搬瓦工的博客，觉得自己使用的不太好，外加由于我拿服务器搭梯子导致网站时不时就被墙了，一弄就是几个月，访问还需要挂ss，索性就想着直接用github搭建一下吧。 整个的搭建过程网上都有详细的描述，我在这里就不多说了。个人的感受就是再一起接触到了Git，整体搭建的思路也算能理解，最好的是hexo写博客文章使用的的markdown。关于md，我一直就想要把它当作我写文章的一个标准文件，这次正好可以">
-<meta name="keywords" content="开始">
+<meta name="description" content="前言（第一段是瞎逼逼，具体操作直接从第二段开始。）到目前为止，我还没有将IOS设备作为主力使用机器过，所以我暂时对IOS的了解不够。从初中到现在用过的安卓手机5、6部应该是有的，每一部手机我应该都ROOT过，可能没有长时期保留ROOT权限，但是绝对是进行过获取ROOT这样的一个操作。在安卓6.0以前，安卓手机用户想要自己配置软件权限是需要借助第三方工具的，并且这些应用中大部分是需要我们有超级用户（">
+<meta name="keywords" content="Android,shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇github博客">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;31&#x2F;%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87github%E5%8D%9A%E5%AE%A2&#x2F;index.html">
+<meta property="og:title" content="ADB免ROOT卸载系统软件">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;23&#x2F;ADB%E5%91%BD%E4%BB%A4%E5%85%8DROOT%E5%8D%B8%E8%BD%BD%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6&#x2F;index.html">
 <meta property="og:site_name" content="优ABC">
-<meta property="og:description" content="之前的搬瓦工的博客，觉得自己使用的不太好，外加由于我拿服务器搭梯子导致网站时不时就被墙了，一弄就是几个月，访问还需要挂ss，索性就想着直接用github搭建一下吧。 整个的搭建过程网上都有详细的描述，我在这里就不多说了。个人的感受就是再一起接触到了Git，整体搭建的思路也算能理解，最好的是hexo写博客文章使用的的markdown。关于md，我一直就想要把它当作我写文章的一个标准文件，这次正好可以">
+<meta property="og:description" content="前言（第一段是瞎逼逼，具体操作直接从第二段开始。）到目前为止，我还没有将IOS设备作为主力使用机器过，所以我暂时对IOS的了解不够。从初中到现在用过的安卓手机5、6部应该是有的，每一部手机我应该都ROOT过，可能没有长时期保留ROOT权限，但是绝对是进行过获取ROOT这样的一个操作。在安卓6.0以前，安卓手机用户想要自己配置软件权限是需要借助第三方工具的，并且这些应用中大部分是需要我们有超级用户（">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-12T07:40:01.571Z">
+<meta property="og:updated_time" content="2020-01-22T16:58:00.150Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/10/31/我的第一篇github博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/23/ADB命令免ROOT卸载系统软件/"/>
 
 
 
 
 
-  <title>我的第一篇github博客 | 优ABC</title>
+  <title>ADB免ROOT卸载系统软件 | 优ABC</title>
   
 
 
@@ -271,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87github%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/23/ADB%E5%91%BD%E4%BB%A4%E5%85%8DROOT%E5%8D%B8%E8%BD%BD%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宁宁鸡">
@@ -288,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的第一篇github博客</h1>
+          <h1 class="post-title" itemprop="name headline">ADB免ROOT卸载系统软件</h1>
         
 
         <div class="post-meta">
@@ -300,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T01:27:07+08:00">
-                2019-10-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-23T00:00:27+08:00">
+                2020-01-23
               </time>
             
 
@@ -323,8 +323,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%97%A5%E5%B8%B8/" itemprop="url" rel="index">
-                    <span itemprop="name">日常</span>
+                  <a href="/categories/%E6%90%9E%E6%9C%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">搞机</span>
                   </a>
                 </span>
 
@@ -360,9 +360,22 @@
       
 
       
-        <p>之前的搬瓦工的博客，觉得自己使用的不太好，外加由于我拿服务器搭梯子导致网站时不时就被墙了，一弄就是几个月，访问还需要挂ss，索性就想着直接用github搭建一下吧。</p>
-<p>整个的搭建过程网上都有详细的描述，我在这里就不多说了。个人的感受就是再一起接触到了Git，整体搭建的思路也算能理解，最好的是hexo写博客文章使用的的markdown。关于md，我一直就想要把它当作我写文章的一个标准文件，这次正好可以满足了，不过目前，图片的插入还没有学习，慢慢来吧。</p>
-<p>今天是2019年10月的最后一天，我找到了工作，放弃了考研，未来的路等着我。对于信息安全工程师这个职业，充满了未知和不确定，加油吧。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>（第一段是瞎逼逼，具体操作直接从第二段开始。）到目前为止，我还没有将IOS设备作为主力使用机器过，所以我暂时对IOS的了解不够。从初中到现在用过的安卓手机5、6部应该是有的，每一部手机我应该都ROOT过，可能没有长时期保留ROOT权限，但是绝对是进行过获取ROOT这样的一个操作。在安卓6.0以前，安卓手机用户想要自己配置软件权限是需要借助第三方工具的，并且这些应用中大部分是需要我们有超级用户（ROOT）权限的。早期的一些有名的软件，例如360手机卫士极客版、LBE安全管家，它们都是小巧而强大的手机助手软件，可以帮助我们控制软件自启动和相互唤醒、软件权限配置、手机垃圾清理、电话短信拦截等工作。后来随着安卓版本的更新优化和各家厂商内置安全中心，这些曾经名震一时的软件逐步淡出人们的视野。前几年安卓手机厂商们喜欢在自己的手机中内置一些自家的应用，并让用户无法卸载。而且越来越多的品牌考虑到用户的安全性已经不提供手机解BootLoader锁的功能（不解锁的手机无法刷机和ROOT），所以用户不能按照自己的意愿删除手机厂商内置的一些软件，即使用户并不需要这个软件。好在国家前几年出了法规要求手机厂商除了手机最基本的功能，不能将其他内置软件变为系统软件阻碍用户删除。法规有效但是还是有一部门软件是我们所不需要的，比如小米手机内置的广告服务软件，所以我们需要借助ADB工具来进行操作。</p>
+<h1 id="ADB工具下载"><a href="#ADB工具下载" class="headerlink" title="ADB工具下载"></a>ADB工具下载</h1><p>我们前去Google提供的下载网页下载（ <a href="https://developer.android.com/studio/releases/platform-tools.html），我使用的是Win版本的adb工具。" target="_blank" rel="noopener">https://developer.android.com/studio/releases/platform-tools.html），我使用的是Win版本的adb工具。</a></p>
+<p>下载完成解压到你想要的目录，进入目录后，点击文件管理器的地址栏，系统会自动帮你全选当前文件夹的地址，之后我们复制此地址。使用WIn+R，调出运行，输入cmd，进行命令行控制台，输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 粘贴刚才复制的地址</span><br></pre></td></tr></table></figure>
+
+<p>然后回车，此时我们就进入到了ADB工具工作的目录下。</p>
+<h1 id="详细操作"><a href="#详细操作" class="headerlink" title="详细操作"></a>详细操作</h1><p>手机连接电脑，并打开手机USB调试。各品牌打开方式不尽相同，可自行百度。</p>
+<ol>
+<li>输入 <code>adb shell</code> 。</li>
+<li>输入<code>pm list packages</code>。查看所有的包名，找出你想卸载应用的包名，这一步你可以省略，因为很多手机可以在设置应用管理里直接看到包名，包名的结构为com.xxx.xxx，而不是软件名称。</li>
+<li>当然你也可以先打开想卸载的软件，然后电脑输入<code>dumpsys window | grep mCurrentFocus</code>，就可以查看当前正在手机界面允许的软件包名。</li>
+<li>输入<code>pm uninstall -k --user 0 packageName</code>。其中，-k为保留软件数据的意思，根据个人意愿可加可不加。</li>
+<li>提示Success的话，则卸载成功。</li>
+<li>输入exit，退出shell模式。再次输入exit，退出cmd。当然你也可以直接点击X来关闭窗口。</li>
+</ol>
+<h1 id="其他知识"><a href="#其他知识" class="headerlink" title="其他知识"></a>其他知识</h1><p>第一步输入<code>adb devices</code>，可以查看手机是否连接电脑成功。输入这个或者第一步的时候，手机可能会弹窗提示是否允许当前电脑进行调试。还有就是在操作完成后，记得关闭手机的USB调试功能，确保手机的安全。</p>
 
       
     </div>
@@ -380,7 +393,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%BC%80%E5%A7%8B/" rel="tag"># 开始</a>
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/shell/" rel="tag"># shell</a>
           
         </div>
       
@@ -393,15 +408,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/11/12/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" rel="next" title="Python面向对象编程">
+                <i class="fa fa-chevron-left"></i> Python面向对象编程
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/12/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" rel="prev" title="Python面向对象编程">
-                Python面向对象编程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -453,8 +468,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/author.jpg"
@@ -516,6 +540,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ADB工具下载"><span class="nav-number">2.</span> <span class="nav-text">ADB工具下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详细操作"><span class="nav-number">3.</span> <span class="nav-text">详细操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他知识"><span class="nav-number">4.</span> <span class="nav-text">其他知识</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
