@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android,shell," />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -94,15 +94,15 @@
 
 
 
-<meta name="description" content="前言（第一段是瞎逼逼，具体操作直接从第二段开始。）到目前为止，我还没有将IOS设备作为主力使用机器过，所以我暂时对IOS的了解不够。从初中到现在用过的安卓手机5、6部应该是有的，每一部手机我应该都ROOT过，可能没有长时期保留ROOT权限，但是绝对是进行过获取ROOT这样的一个操作。在安卓6.0以前，安卓手机用户想要自己配置软件权限是需要借助第三方工具的，并且这些应用中大部分是需要我们有超级用户（">
-<meta name="keywords" content="Android,shell">
+<meta name="description" content="概念这两天在复习Python基础，因为蛮久没写过正紧的代码了，今天学习到了递归这里，发现了自己上学期面试中兴测试那会遇到的一个问题，反转一个字符串。记得当时就是直着想，写了一大段的代码，最终实现没实现，我都不确定。现在突然感觉羞愧难耐，我的代码水平的确退步了很多。我还记得大学前两年是写过这样的问题的。 最好的方法就是使用程序递归。递归就是函数在代码里面调用了自身，从而实现了一个递归链条。递归的思想">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ADB免ROOT卸载系统软件">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;23&#x2F;ADB%E5%91%BD%E4%BB%A4%E5%85%8DROOT%E5%8D%B8%E8%BD%BD%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6&#x2F;index.html">
+<meta property="og:title" content="递归思想和汉诺塔问题">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;15&#x2F;%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3%E5%92%8C%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="优ABC">
-<meta property="og:description" content="前言（第一段是瞎逼逼，具体操作直接从第二段开始。）到目前为止，我还没有将IOS设备作为主力使用机器过，所以我暂时对IOS的了解不够。从初中到现在用过的安卓手机5、6部应该是有的，每一部手机我应该都ROOT过，可能没有长时期保留ROOT权限，但是绝对是进行过获取ROOT这样的一个操作。在安卓6.0以前，安卓手机用户想要自己配置软件权限是需要借助第三方工具的，并且这些应用中大部分是需要我们有超级用户（">
+<meta property="og:description" content="概念这两天在复习Python基础，因为蛮久没写过正紧的代码了，今天学习到了递归这里，发现了自己上学期面试中兴测试那会遇到的一个问题，反转一个字符串。记得当时就是直着想，写了一大段的代码，最终实现没实现，我都不确定。现在突然感觉羞愧难耐，我的代码水平的确退步了很多。我还记得大学前两年是写过这样的问题的。 最好的方法就是使用程序递归。递归就是函数在代码里面调用了自身，从而实现了一个递归链条。递归的思想">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-02T17:33:51.731Z">
+<meta property="og:updated_time" content="2020-02-15T07:11:49.217Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/23/ADB命令免ROOT卸载系统软件/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/02/15/递归思想和汉诺塔问题/"/>
 
 
 
 
 
-  <title>ADB免ROOT卸载系统软件 | 优ABC</title>
+  <title>递归思想和汉诺塔问题 | 优ABC</title>
   
 
 
@@ -271,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/23/ADB%E5%91%BD%E4%BB%A4%E5%85%8DROOT%E5%8D%B8%E8%BD%BD%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/15/%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3%E5%92%8C%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宁宁鸡">
@@ -288,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ADB免ROOT卸载系统软件</h1>
+          <h1 class="post-title" itemprop="name headline">递归思想和汉诺塔问题</h1>
         
 
         <div class="post-meta">
@@ -300,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-23T00:00:27+08:00">
-                2020-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-15T14:34:16+08:00">
+                2020-02-15
               </time>
             
 
@@ -323,8 +323,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9E%E6%9C%BA/" itemprop="url" rel="index">
-                    <span itemprop="name">搞机</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -360,25 +360,24 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>（第一段是瞎逼逼，具体操作直接从第二段开始。）到目前为止，我还没有将IOS设备作为主力使用机器过，所以我暂时对IOS的了解不够。从初中到现在用过的安卓手机5、6部应该是有的，每一部手机我应该都ROOT过，可能没有长时期保留ROOT权限，但是绝对是进行过获取ROOT这样的一个操作。在安卓6.0以前，安卓手机用户想要自己配置软件权限是需要借助第三方工具的，并且这些应用中大部分是需要我们有超级用户（ROOT）权限的。早期的一些有名的软件，例如360手机卫士极客版、LBE安全管家，它们都是小巧而强大的手机助手软件，可以帮助我们控制软件自启动和相互唤醒、软件权限配置、手机垃圾清理、电话短信拦截等工作。后来随着安卓版本的更新优化和各家厂商内置安全中心，这些曾经名震一时的软件逐步淡出人们的视野。前几年安卓手机厂商们喜欢在自己的手机中内置一些自家的应用，并让用户无法卸载。而且越来越多的品牌考虑到用户的安全性已经不提供手机解BootLoader锁的功能（不解锁的手机无法刷机和ROOT），所以用户不能按照自己的意愿删除手机厂商内置的一些软件，即使用户并不需要这个软件。好在国家前几年出了法规要求手机厂商除了手机最基本的功能，不能将其他内置软件变为系统软件阻碍用户删除。法规有效但是还是有一部门软件是我们所不需要的，比如小米手机内置的广告服务软件，所以我们需要借助ADB工具来进行操作。</p>
-  <a id="more"></a> 
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>这两天在复习Python基础，因为蛮久没写过正紧的代码了，今天学习到了递归这里，发现了自己上学期面试中兴测试那会遇到的一个问题，反转一个字符串。记得当时就是直着想，写了一大段的代码，最终实现没实现，我都不确定。现在突然感觉羞愧难耐，我的代码水平的确退步了很多。我还记得大学前两年是写过这样的问题的。</p>
+<p>最好的方法就是使用程序递归。递归就是函数在代码里面调用了自身，从而实现了一个递归链条。递归的思想和数学上的数学归纳法很相似。数学归纳法说的是先证明n取N 0时命题成立，后假设n=N k也满足命题，证明n=N k+1也满足命题，就可以证明命题成立。</p>
+<p>递归包含两个部分，一个是<strong>基值</strong>，也就是N 0。还有一个就是<strong>链条关系</strong>。实现方面我们就需要一个基质和分支语句实现。</p>
+<h1 id="阶乘计算"><a href="#阶乘计算" class="headerlink" title="阶乘计算"></a>阶乘计算</h1><p>例如我们要计算N的阶乘，可以使用下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cal</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n = <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> n*cal(n<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
 
-<h1 id="ADB工具下载"><a href="#ADB工具下载" class="headerlink" title="ADB工具下载"></a>ADB工具下载</h1><p>我们前去Google提供的下载网页下载 。<a href="https://developer.android.com/studio/releases/platform-tools.html" target="_blank" rel="noopener">https://developer.android.com/studio/releases/platform-tools.html</a></p>
-<p>我使用的是Win版本的adb工具。</p>
-<p>下载完成解压到你想要的目录，进入目录后，点击文件管理器的地址栏，系统会自动帮你全选当前文件夹的地址，之后我们复制此地址。使用WIn+R，调出运行，输入cmd，进行命令行控制台，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 粘贴刚才复制的地址</span><br></pre></td></tr></table></figure>
+<p>我的感觉是如果我们需要求解的问题可以<strong>分化成一个二元问题</strong>的递归就可以使用递归来写代码。比如阶乘中，任何一个数的阶乘都等于它本身×后一个数字的阶乘，且这个<strong>关系一直存在，直到基值为止</strong>。</p>
+<h1 id="反转字符串"><a href="#反转字符串" class="headerlink" title="反转字符串"></a>反转字符串</h1><p>说到这里递归的概念我们大概有了了解，再回到开头我之前遇到的反转字符串的问题，分析它该如何解决。我们需要把第一位字符放到最后，然后，第二个字符放在倒数第二的位置，依次往后。放第一个字符的时候，就是一个二元问题，剩下的为一元，第一个字符为一元。剩下的字符单独看成一个需要反转。下一层就是在这个小团里面在把第一个放在最后。基值为当字符为空的时候，它的反转就是它本身。所以代码如下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">vars</span><span class="params">(s)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> s == <span class="string">""</span>:</span><br><span class="line">        <span class="keyword">return</span> s</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> s[<span class="number">1</span>:]+s[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
 
-<p>然后回车，此时我们就进入到了ADB工具工作的目录下。</p>
-<h1 id="详细操作"><a href="#详细操作" class="headerlink" title="详细操作"></a>详细操作</h1><p>手机连接电脑，并打开手机USB调试。各品牌打开方式不尽相同，可自行百度。</p>
-<ol>
-<li>输入 <code>adb shell</code> 。</li>
-<li>输入<code>pm list packages</code>。查看所有的包名，找出你想卸载应用的包名，这一步你可以省略，因为很多手机可以在设置应用管理里直接看到包名，包名的结构为com.xxx.xxx，而不是软件名称。</li>
-<li>当然你也可以先打开想卸载的软件，然后电脑输入<code>dumpsys window | grep mCurrentFocus</code>，就可以查看当前正在手机界面允许的软件包名。</li>
-<li>输入<code>pm uninstall -k --user 0 packageName</code>。其中，-k为保留软件数据的意思，根据个人意愿可加可不加。</li>
-<li>提示Success的话，则卸载成功。</li>
-<li>输入exit，退出shell模式。再次输入exit，退出cmd。当然你也可以直接点击X来关闭窗口。</li>
-</ol>
-<h1 id="其他知识"><a href="#其他知识" class="headerlink" title="其他知识"></a>其他知识</h1><p>第一步输入<code>adb devices</code>，可以查看手机是否连接电脑成功。输入这个或者第一步的时候，手机可能会弹窗提示是否允许当前电脑进行调试。还有就是在操作完成后，记得关闭手机的USB调试功能，确保手机的安全。</p>
+<p>通过上述语句可以实现字符串的反转。第一个字母和后面的调换，后面的字母也这样，往复递归，使得字符串反转。abcd    -    bcda    -    cdba    -    dcba</p>
+<h1 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h1><p>汉诺塔问题是一个很有趣的问题。说的是，有三个柱子，A柱上有金字塔形状的圆饼从上到下堆在一起，一共有n个圆饼，现在需要将A柱上的所有圆饼移动至C柱，中间还有一个空的B柱。要求移动的过程中，不能出现小圆饼在大圆饼下面的情况。问要怎么移动，同时需要移动多少次？</p>
+<p>这个问题让我们人来计算可能会很麻烦，且随着n的增大，难度会显著提升。这时候我们就要分析问题了。如果只有一个圆饼，我们可以直接将圆饼拿到C柱。当有两个圆饼的时候，我们无疑是要将小的移动至B柱，然后大的移动至C柱，然后小的在跟上去C柱。</p>
+<p>所以我们可以尝试去编写程序来实现这个功能。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">count = <span class="number">0</span>	<span class="comment">#标记移动的次数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hnt</span><span class="params">(n, src, dst, mid)</span>:</span></span><br><span class="line">	<span class="keyword">global</span> count</span><br><span class="line">	<span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">		print(<span class="string">"&#123;&#125;从&#123;&#125;到&#123;&#125;"</span>.format(n, src, dst))</span><br><span class="line">		count += <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		hnt(n<span class="number">-1</span>, src, mid, dst)		<span class="comment">#将n-1个搬到中间</span></span><br><span class="line">		print(<span class="string">"&#123;&#125;从&#123;&#125;到&#123;&#125;"</span>.format(n, src, dst))	<span class="comment">#把编号n搬到右边</span></span><br><span class="line">		count += <span class="number">1</span></span><br><span class="line">		hnt(n<span class="number">-1</span>, mid, dst, src)		<span class="comment">#将中间n-1个搬到右边</span></span><br><span class="line">hnt(<span class="number">3</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>)</span><br><span class="line">print(count)</span><br></pre></td></tr></table></figure>
+
+<p>1从a到c<br>2从a到b<br>1从c到b<br>3从a到c<br>1从b到a<br>2从b到c<br>1从a到c<br>7</p>
+<p>以上是结果。简单就完成了，蛮厉害的，主要还是会分析，思考要用递归。汉诺塔代码中else部分的count的加可以好好思考思考为什么。</p>
 
       
     </div>
@@ -396,9 +395,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
-          
-            <a href="/tags/shell/" rel="tag"># shell</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -411,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/12/Python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" rel="next" title="Python面向对象编程">
-                <i class="fa fa-chevron-left"></i> Python面向对象编程
+              <a href="/2020/01/23/ADB%E5%91%BD%E4%BB%A4%E5%85%8DROOT%E5%8D%B8%E8%BD%BD%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6/" rel="next" title="ADB免ROOT卸载系统软件">
+                <i class="fa fa-chevron-left"></i> ADB免ROOT卸载系统软件
               </a>
             
           </div>
@@ -420,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/15/%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3%E5%92%8C%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/" rel="prev" title="递归思想和汉诺塔问题">
-                递归思想和汉诺塔问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -557,7 +550,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ADB工具下载"><span class="nav-number">2.</span> <span class="nav-text">ADB工具下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#详细操作"><span class="nav-number">3.</span> <span class="nav-text">详细操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他知识"><span class="nav-number">4.</span> <span class="nav-text">其他知识</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阶乘计算"><span class="nav-number">2.</span> <span class="nav-text">阶乘计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反转字符串"><span class="nav-number">3.</span> <span class="nav-text">反转字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#汉诺塔问题"><span class="nav-number">4.</span> <span class="nav-text">汉诺塔问题</span></a></li></ol></div>
             
 
           </div>
